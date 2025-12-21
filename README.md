@@ -1,6 +1,6 @@
 # Projects #
 
-I have created a series of documents and videos to showcase my key cybersecurity projects. Dive in to explore the details and highlights of my projects. I delve into various cybersecurity projects, extracting valuable lessons and insights from each endeavor.
+I have created a series of documents and videos to showcase my key cybersecurity projects. Dive in and explore the details, highlights, valuable skills developed. I delve into various cybersecurity projects, extracting valuable lessons and insights from each endeavor.
 
 ## Key Projects:
 
