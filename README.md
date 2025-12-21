@@ -18,6 +18,11 @@ Highlights:
 * MITRE ATT&CK framework mapping
 * Professional security documentation and remediation guidance
 * Ethical hacking with formal authorization scope
+  
+[Legal Authorization Authorized Internal Web Application Security Assessment.pdf](https://github.com/user-attachments/files/24281296/Legal.Authorization.Authorized.Internal.Web.Application.Security.Assessment.pdf)
+
+[Authorized Internal Web Application Security Assessment.pdf](https://github.com/user-attachments/files/24281298/Authorized.Internal.Web.Application.Security.Assessment.pdf)
+
 
 ### Home Network Penetration Testing Reporting & Legal Authorization Project | Dec. 2025 | Technology Law & Cybersecurity Engagement | Focus: Computer Fraud and Abuse Act (CFAA), Cybersecurity Legal Frameworks
 
@@ -29,6 +34,8 @@ Highlights:
 
 •	Performed comprehensive network security assessments, vulnerability analysis, and embedded device hardening using industry-standard tools and methodologies. Practical expertise in network architecture design, including migrating home networks from ISP modem configurations to hardened router deployments with segregated wireless networks.
 
+[Master Services Agreement (MSA) and Rules of Engagement (RoE)-Network Penetration Testing.pdf](https://github.com/user-attachments/files/24281301/Master.Services.Agreement.MSA.and.Rules.of.Engagement.RoE.-Network.Penetration.Testing.pdf)
+
 
 ### Home Network Penetration Testing & Router Hardening Lab | Dec. 2025 | GL.iNet OpenWRT Security Assessment | Tools: Nmap, tcpdump, Dropbear SSH, OpenWRT/Linux, netstat
 
@@ -39,6 +46,8 @@ Highlights:
 •	Deployed tcpdump f.or traffic monitoring and validated network segmentation through ARP/neighbor table analysis.
 
 •	Identified service exposure on endpoints (printer interfaces, VNC, SMB) and provided prioritized remediation recommendations following NIST/PTES methodology.
+
+[Network Penetration Testing Findings Report.pdf](https://github.com/user-attachments/files/24281303/Network.Penetration.Testing.Findings.Report.pdf)
 
 
  ## Previous Projects:
