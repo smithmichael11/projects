@@ -5,7 +5,6 @@ I have created a series of documents and videos to showcase my key cybersecurity
 ## Key Projects:
 
 ### WordPress Security Governance & Legal Authorization | Dec. 2025 | Technology Law & Cybersecurity Engagement | Focus: Computer Fraud and Abuse Act (CFAA), Risk Governance
-
 ### WordPress Security Assessment & Containerized Lab | Dec. 2025| Authorized Web Application Security Assessment | Tools: Docker, WPScan, Nikto, Nmap, Apache/PHP, cURL
 
 Project Title: WordPress Security Assessment Lab
