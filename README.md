@@ -4,6 +4,22 @@ I have created a series of documents and videos to showcase my key cybersecurity
 
 ## Key Projects:
 
+## WordPress Security Governance & Legal Authorization | Dec. 2025 | Technology Law & Cybersecurity Engagement | Focus: Computer Fraud and Abuse Act (CFAA), Risk Governance
+
+## WordPress Security Assessment & Containerized Lab | Dec. 2025| Authorized Web Application Security Assessment | Tools: Docker, WPScan, Nikto, Nmap, Apache/PHP, cURL
+
+Project Title: WordPress Security Assessment Lab
+Description: End-to-end security testing environment featuring containerized WordPress deployment, automated vulnerability scanning, and comprehensive security analysis. Demonstrates practical application of penetration testing methodologies, security tool proficiency, and professional documentation standards.
+Technologies: Docker, WPScan, Nikto, Nmap, WordPress, MySQL, Apache, PHP, Linux
+
+Highlights:
+
+* Containerized infrastructure for isolated security testing
+* Industry-standard vulnerability assessment tools
+* MITRE ATT&CK framework mapping
+* Professional security documentation and remediation guidance
+* Ethical hacking with formal authorization scope
+
 ### Home Network Penetration Testing Reporting & Legal Authorization Project | Dec. 2025 | Technology Law & Cybersecurity Engagement | Focus: Computer Fraud and Abuse Act (CFAA), Cybersecurity Legal Frameworks
 
 •	Drafted comprehensive pre-engagement legal authorization suite including Authorization to Test, Rules of Engagement, Statement of Work, and Confidentiality Agreement; analyzed CFAA (18 U.S.C. § 1030) risk exposure and structured explicit written consent to distinguish authorized testing from unlawful access.
