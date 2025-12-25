@@ -4,6 +4,66 @@ I have created a series of documents and videos to showcase my key cybersecurity
 
 ## Key Projects:
 
+### Network Security Assessment & SIEM Integration Lab| Dec. 2025 |Enterprise-Grade Security Monitoring Homelab | Focus: Network Reconnaissance, Traffic Analysis, Intrusion Detection, and Centralized Log Management
+
+Built a fully functional security operations center (SOC) environment to identify, analyze, and mitigate network vulnerabilities across a multi-subnet home network. This project showcases practical skills in network reconnaissance, traffic analysis, intrusion detection, and centralized log management.
+
+🛠️ Technologies & Tools
+
+Security & Monitoring:
+* Splunk Enterprise — SIEM platform for log aggregation and correlation
+* Suricata IDS — Real-time intrusion detection and prevention
+* Nmap — Network discovery and vulnerability assessment
+* tcpdump — Packet capture and network traffic analysis
+  
+Environment:
+* Network: Multi-subnet LAN (192.168.8.0/24, 10.0.0.0/24)
+* Host OS: macOS 10.15
+* Hardware: GL.iNet Router, Multiple IoT devices
+* Protocols: HTTP/HTTPS, DNS, SSH, Telnet, RTSP, mDNS
+
+🎪 Key Achievements
+
+✅ Discovered 9 live hosts across two network subnets using Nmap reconnaissance 
+
+✅ Analyzed 5,000+ network flow records in Splunk with custom correlation queries 
+
+✅ Identified 28 medium-risk HTTP connections requiring security hardening 
+
+✅ Deployed Suricata IDS capturing 2,475 packets with automated alert generation 
+
+✅ Implemented HTTPS encryption on router management interface, reducing attack surface 
+
+✅ Mapped threats to MITRE ATT&CK framework (T1078, T1071, T1041, T1021) 
+
+✅ Created automated alerting for high-risk services (Telnet, unencrypted HTTP, RTSP)
+
+📊 Project Highlights
+
+Network Discovery & Enumeration
+* Performed comprehensive host discovery across home network
+* Enumerated services on all active hosts with version detection
+* Identified critical vulnerabilities: unencrypted HTTP, exposed Telnet, RTSP streams
+
+SIEM Integration & Analysis
+* Configured Splunk Enterprise with custom data inputs (XML, PCAP, JSON)
+* Developed SPL queries to correlate network flows with security events
+* Built dashboards for real-time monitoring and historical trend analysis
+* Processed multi-source telemetry from Nmap, tcpdump, and Suricata
+
+Traffic Analysis & Threat Detection
+* Captured live network traffic using tcpdump with targeted BPF filters
+* Analyzed DNS patterns (1,734 queries to Cloudflare DNS)
+* Identified encrypted vs unencrypted traffic ratios
+* Detected anomalous connection patterns and high-volume communications
+
+Security Hardening & Remediation
+* Disabled insecure services (Telnet port 23)
+* Implemented HTTPS with self-signed certificates on router GUI
+* Configured automated monitoring for remaining high-risk services
+* Validated remediation effectiveness through post-implementation scanning
+
+  
 ### WordPress Security Governance & Legal Authorization | Dec. 2025 | Technology Law & Cybersecurity Engagement | Focus: Computer Fraud and Abuse Act (CFAA), Risk Governance
 ### WordPress Security Assessment & Containerized Lab | Dec. 2025| Authorized Web Application Security Assessment | Tools: Docker, WPScan, Nikto, Nmap, Apache/PHP, cURL
 
