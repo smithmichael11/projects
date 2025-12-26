@@ -38,6 +38,7 @@ Environment:
 
 ✅ Created automated alerting for high-risk services (Telnet, unencrypted HTTP, RTSP)
 
+
 📊 Project Highlights
 
 Network Discovery & Enumeration
@@ -62,6 +63,9 @@ Security Hardening & Remediation
 * Implemented HTTPS with self-signed certificates on router GUI
 * Configured automated monitoring for remaining high-risk services
 * Validated remediation effectiveness through post-implementation scanning
+
+
+[Splunk Lab Security Assessment.pdf](https://github.com/user-attachments/files/24341908/Splunk.Lab.Security.Assessment.pdf)
 
   
 ### WordPress Security Governance & Legal Authorization | Dec. 2025 | Technology Law & Cybersecurity Engagement | Focus: Computer Fraud and Abuse Act (CFAA), Risk Governance
