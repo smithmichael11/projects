@@ -10,6 +10,9 @@ HomeShield CLI is a local-first, defensive home-network security assessment and 
 
 HomeShield started as a safe home-network scanner and evolved into a local security operations cockpit with device identity management, SOC case workflow, safe scan profiles, metadata-only traffic summaries, remediation tracking, ATT&CK-style defensive mapping, automation, privacy controls, and portfolio-safe demo/scrub output.
 
+<img width="1904" height="938" alt="image" src="https://github.com/user-attachments/assets/4ba74997-bc60-48cf-9851-f32ec4a6a49e" />
+
+
 Project Purpose
 
 Home networks often contain a mix of routers, phones, laptops, smart TVs, cameras, printers, IoT devices, guest devices, and stale network artifacts. A basic scan can create noise, duplicate findings, or alarming results without context.
@@ -36,6 +39,9 @@ The dashboard is built around two source-of-truth workspaces:
 * SOC / Issues — authoritative source for case status, analyst decisions, accepted risks, false positives, stale artifacts, remediation state, and investigation notes.
 
 Other views such as Overview, Remediation, Threat Review, ATT&CK Map, Evidence, Traffic, and Reports inherit from these source-of-truth records.
+
+<img width="1894" height="931" alt="image" src="https://github.com/user-attachments/assets/936c3736-5682-4ee7-a227-f1e16f176573" />
+
 
 Safe Scanner
 
@@ -89,6 +95,8 @@ HomeShield includes a local SOC-style workflow for:
 
 A case decision made in SOC is reflected across the dashboard, reports, remediation views, threat review, and ATT&CK mapping.
 
+<img width="1897" height="812" alt="image" src="https://github.com/user-attachments/assets/33aef661-e6d2-4558-bfd4-64406198549c" />
+
 Evidence and Reporting
 
 HomeShield generates structured evidence and reports, including:
@@ -109,6 +117,8 @@ Reports are designed to separate active action items from accepted risks, resolv
 Metadata-Only Traffic Summary
 
 HomeShield includes privacy-conscious traffic summary functionality. By default, traffic review is metadata-only and does not capture payloads, credentials, camera streams, or message contents.
+
+<img width="1916" height="930" alt="image" src="https://github.com/user-attachments/assets/9f8b1cc4-cc26-4965-992e-b18ef01b58b1" />
 
 Traffic summaries may include:
 
