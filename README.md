@@ -40,9 +40,6 @@ The dashboard is built around two source-of-truth workspaces:
 
 Other views such as Overview, Remediation, Threat Review, ATT&CK Map, Evidence, Traffic, and Reports inherit from these source-of-truth records.
 
-<img width="1894" height="931" alt="image" src="https://github.com/user-attachments/assets/936c3736-5682-4ee7-a227-f1e16f176573" />
-
-
 Safe Scanner
 
 HomeShield includes source-of-truth-aware safe scanning with:
@@ -59,6 +56,8 @@ HomeShield includes source-of-truth-aware safe scanning with:
 * Preservation of accepted/resolved/stale decisions
 
 The scanner is designed to reduce false positives by distinguishing real active devices from stale ARP entries, broadcast addresses, guest devices, upstream observations, public DNS artifacts, and non-device records.
+
+<img width="1897" height="812" alt="image" src="https://github.com/user-attachments/assets/33aef661-e6d2-4558-bfd4-64406198549c" />
 
 Device Identity Management
 
@@ -94,8 +93,6 @@ HomeShield includes a local SOC-style workflow for:
 * Remediation tracking
 
 A case decision made in SOC is reflected across the dashboard, reports, remediation views, threat review, and ATT&CK mapping.
-
-<img width="1897" height="812" alt="image" src="https://github.com/user-attachments/assets/33aef661-e6d2-4558-bfd4-64406198549c" />
 
 Evidence and Reporting
 
@@ -287,7 +284,6 @@ Environment:
 ✅ Mapped threats to MITRE ATT&CK framework (T1078, T1071, T1041, T1021) 
 
 ✅ Created automated alerting for high-risk services (Telnet, unencrypted HTTP, RTSP)
-
 
 
 📊 Project Highlights
