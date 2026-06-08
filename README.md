@@ -4,82 +4,99 @@ I have created a series of documents and videos to showcase my key technical pro
 
 ## Key Projects:
 
+###Sapphire Quant Lab 
+
+is a Python-based paper-trading command center designed to simulate a disciplined trading operations workflow. It combines expanded-universe market scanning, real-time candidate ranking, setup review, risk controls, officer-style decision oversight, money tracking, audit logs, reports, and a searchable Knowledge Base into one dashboard. The system is built around safety-first principles: scanner results do not equal trade approval, proposals must pass review gates, paper trade actions remain locked unless conditions are satisfied, and live trading is disabled by default.
+
+Through this project, I strengthened my understanding of Python application structure, dashboard design, market-data workflows, runtime state management, safety gates, audit logging, and test-driven development. I also learned how important information architecture is when building operator-facing tools: a system can have strong logic, but it still needs a simple interface, clear source-of-truth data flow, and concise next-action guidance to be useful. The project helped me connect technical automation with financial technology, risk governance, trading psychology, and practical decision-support design.
+
 ### HomeShield CLI
 
-HomeShield CLI is a local-first, defensive home-network security assessment and SOC-style dashboard project built in Python. It helps authorized users inventory devices, safely review network services, track security findings, document evidence, manage remediation decisions, and generate professional reports without exposing private network data.
+# HomeShield CLI
 
-HomeShield started as a safe home-network scanner and evolved into a local security operations cockpit with device identity management, SOC case workflow, safe scan profiles, metadata-only traffic summaries, remediation tracking, ATT&CK-style defensive mapping, automation, privacy controls, and portfolio-safe demo/scrub output.
+### Local Home SOC Dashboard, Safe Network Scanner, and Privacy-First Security Reporting Tool
 
-<img width="1904" height="938" alt="image" src="https://github.com/user-attachments/assets/4ba74997-bc60-48cf-9851-f32ec4a6a49e" />
+HomeShield CLI is a local-first cybersecurity project built in Python to help authorized users inventory, review, and harden their own home networks. It started as a safe network scanner and evolved into a lightweight home SOC dashboard with device identity management, SOC-style case tracking, evidence handling, remediation workflows, automation, PDF reporting, Gmail report delivery, and scrubbed demo mode for portfolio sharing.
 
+The project was designed around one core principle: **useful defensive security without exploitation, credential attacks, payload capture, or unsafe automation.**
 
-Project Purpose
+<img width="1904" height="938" alt="HomeShield overview dashboard" src="https://github.com/user-attachments/assets/4ba74997-bc60-48cf-9851-f32ec4a6a49e" />
 
-Home networks often contain a mix of routers, phones, laptops, smart TVs, cameras, printers, IoT devices, guest devices, and stale network artifacts. A basic scan can create noise, duplicate findings, or alarming results without context.
+---
 
-HomeShield is designed to answer practical defensive questions:
+## Why I Built This
 
-* What devices are currently on my network?
+Home networks are full of routers, phones, laptops, smart TVs, cameras, printers, guest devices, private/randomized MAC addresses, and stale network artifacts. Basic scans can create noise unless the results are tied to a clear source of truth.
+
+I built HomeShield to answer practical questions:
+
+* What devices are actually on the network?
 * Which devices are known, unknown, guest, stale, or non-device artifacts?
-* Which services are open, expected, or need review?
+* Which services are open and need review?
 * What evidence supports each finding?
-* What needs action, what has been accepted, and what has been resolved?
-* Are reports and dashboards synchronized with the latest device and SOC decisions?
-* Can I generate safe reports without leaking private network data?
+* What needs action, what has been accepted, and what has already been resolved?
+* Can reports be generated without leaking private network data?
 
-Key Features
+---
 
-Local Home SOC Dashboard
+## Core Features
 
-HomeShield includes a local dashboard for reviewing device identity, scan results, SOC cases, remediation actions, traffic summaries, evidence, and reports.
+### Local SOC Dashboard
 
-The dashboard is built around two source-of-truth workspaces:
+HomeShield includes a browser-based local dashboard for reviewing devices, findings, SOC cases, remediation actions, traffic summaries, evidence, reports, and automation status.
 
-* Devices — authoritative source for asset identity, known IPs, known MACs, trust state, device type, owner, zone, notes, and device history.
-* SOC / Issues — authoritative source for case status, analyst decisions, accepted risks, false positives, stale artifacts, remediation state, and investigation notes.
+The dashboard uses two main sources of truth:
 
-Other views such as Overview, Remediation, Threat Review, ATT&CK Map, Evidence, Traffic, and Reports inherit from these source-of-truth records.
+* **Devices** — asset identity, IP/MAC history, trust state, owner, zone, notes, and device profile data.
+* **SOC / Issues** — case status, accepted risks, false positives, stale artifacts, remediation status, and analyst decisions.
 
-Safe Scanner
+This structure keeps the dashboard, reports, remediation views, and email summaries synchronized.
 
-HomeShield includes source-of-truth-aware safe scanning with:
+---
 
-* Authorized scope validation
+### Safe Scanner and Target Review
+
+HomeShield performs safe, authorized service checks against approved local LAN targets. It is designed to avoid noisy or unsafe behavior.
+
+Key scanner features include:
+
+* Authorized-scope validation
 * Safe scan profiles
-* Scan target selection
-* Excluded target reasoning
-* Artifact filtering
-* Scan run history
-* Evidence generation
-* Service review without exploitation
-* Duplicate finding prevention
-* Preservation of accepted/resolved/stale decisions
+* Scan target inclusion/exclusion logic
+* Stale ARP and non-device artifact filtering
+* Evidence-backed service review
+* Scan history
+* Preservation of accepted, resolved, and stale decisions
+* No exploitation, brute force, credential testing, or payload capture
 
-The scanner is designed to reduce false positives by distinguishing real active devices from stale ARP entries, broadcast addresses, guest devices, upstream observations, public DNS artifacts, and non-device records.
+<img width="1897" height="812" alt="HomeShield scan target review" src="https://github.com/user-attachments/assets/33aef661-e6d2-4558-bfd4-64406198549c" />
 
-<img width="1897" height="812" alt="image" src="https://github.com/user-attachments/assets/33aef661-e6d2-4558-bfd4-64406198549c" />
+---
 
-Device Identity Management
+### Device Identity Management
 
-HomeShield supports a device registry that tracks:
+A major lesson from this project was that asset identity is harder than just reading an IP address. Devices move, MAC addresses randomize, stale ARP entries linger, and one physical device can appear multiple ways.
+
+HomeShield tracks:
 
 * Friendly device names
-* Current IP and MAC
-* Known IP history
-* Known MAC history
-* Private/randomized MAC handling
-* Device type and owner
-* Network zone
+* Current IP and evidence IP
+* Current MAC and evidence MAC
+* Known IP/MAC history
+* Private/randomized MAC behavior
+* Device type, owner, room, and zone
 * Trust state
 * Identity confidence
-* Stale/non-device classifications
-* Related SOC cases and evidence
+* Stale and non-device artifacts
+* Related issues, evidence, and history
 
-This helps prevent the same physical device from appearing as multiple unknown devices when IPs or randomized MAC addresses change.
+This helped me learn how to separate **current identity** from **historical evidence** and avoid incorrect device attribution.
 
-SOC Case Workflow
+---
 
-HomeShield includes a local SOC-style workflow for:
+### SOC Case Workflow
+
+HomeShield supports a local SOC-style workflow for:
 
 * Open findings
 * Needs-review items
@@ -87,16 +104,17 @@ HomeShield includes a local SOC-style workflow for:
 * Resolved cases
 * False positives
 * Stale / non-device artifacts
-* Decision reasons
 * Analyst notes
 * Evidence linking
-* Remediation tracking
+* Remediation decisions
 
-A case decision made in SOC is reflected across the dashboard, reports, remediation views, threat review, and ATT&CK mapping.
+A decision made in the SOC view is reflected across the dashboard, reports, remediation pages, ATT&CK-style mappings, and weekly email summaries.
 
-Evidence and Reporting
+---
 
-HomeShield generates structured evidence and reports, including:
+### Evidence and Reporting
+
+HomeShield generates structured reports and evidence outputs, including:
 
 * One-page home brief
 * Home network summary
@@ -105,58 +123,61 @@ HomeShield generates structured evidence and reports, including:
 * SOC correlation report
 * Device timeline
 * Source-of-truth sync report
-* Traffic metadata summary
-* ATT&CK-style defensive mapping
 * Evidence index
+* PDF reports
+* Weekly email-ready summaries
 
-Reports are designed to separate active action items from accepted risks, resolved items, false positives, and stale artifacts.
+Reports are designed to separate true action items from accepted risks, resolved items, false positives, and stale artifacts.
 
-Metadata-Only Traffic Summary
+---
 
-HomeShield includes privacy-conscious traffic summary functionality. By default, traffic review is metadata-only and does not capture payloads, credentials, camera streams, or message contents.
+### Metadata-Only Traffic Review
 
-<img width="1916" height="930" alt="image" src="https://github.com/user-attachments/assets/9f8b1cc4-cc26-4965-992e-b18ef01b58b1" />
+Traffic review is privacy-conscious by default. HomeShield summarizes metadata only and does not capture payloads, credentials, camera streams, or message contents.
 
-Traffic summaries may include:
+Traffic summaries can show:
 
 * Top talkers
 * New destinations
-* Guest activity
 * Unknown device activity
+* Guest activity
 * Unusual ports
-* Traffic anomalies
+* Volume or timing anomalies
 * Device-to-traffic correlation
 
-Safe Automation
+<img width="1916" height="930" alt="HomeShield traffic metadata dashboard" src="https://github.com/user-attachments/assets/9f8b1cc4-cc26-4965-992e-b18ef01b58b1" />
 
-HomeShield supports safe automation modes, including:
+---
 
-* daily-light
-* weekly-safe
-* monthly-report
-* portfolio-demo
-* quick-dashboard
-* qa-only
+## Automation and Weekly Reporting
 
-Automation can run safe checks, refresh dashboard data, generate reports, produce summaries, export schedules, and draft weekly emails. It does not automatically trust devices, close cases, modify router settings, capture payloads, or perform offensive testing.
+HomeShield includes safe automation modes:
 
-Weekly Email Reporting
+* `daily-light`
+* `weekly-safe`
+* `monthly-report`
+* `qa-only`
+* `quick-dashboard`
+* `portfolio-demo`
 
-HomeShield supports optional weekly email reporting with strict safety controls:
+Automation can reconcile devices, review scan targets, run safe LAN checks, refresh dashboard data, generate reports, produce PDFs, and send weekly report emails when explicitly enabled.
 
-* Draft-only by default
-* Explicit send-enabled mode required
-* SMTP credentials loaded from environment variables only
+Automation does **not** automatically trust devices, close cases, accept risk, modify router settings, capture payloads, or perform offensive testing.
+
+Weekly reporting includes:
+
+* PDF attachments
+* Safe default attachment policy
 * Gmail SMTP support
-* No SMTP password stored in project config
+* `.env`-only SMTP credentials
 * No raw evidence, logs, traffic data, router snapshots, or registries attached by default
-* Safe attachment policy
-* Dashboard email status
-* Git privacy checks
+* Git privacy checks before source commits
 
-Portfolio / Demo Scrub Mode
+---
 
-HomeShield includes scrub/demo export functionality for safe portfolio sharing. Scrubbed output removes or replaces sensitive details such as:
+## Portfolio / Demo Mode
+
+HomeShield includes a scrubbed demo workflow for GitHub and portfolio use. Demo mode removes or replaces sensitive data such as:
 
 * Real MAC addresses
 * Real device names
@@ -164,11 +185,37 @@ HomeShield includes scrub/demo export functionality for safe portfolio sharing. 
 * Router snapshots
 * Raw traffic data
 * Raw telemetry
-* Private project artifacts
+* Private assessment artifacts
 
-This allows the project architecture and workflow to be demonstrated without exposing private home-network details.
+This allows the dashboard and reports to be shown publicly without exposing real home-network details.
 
-Safety Model
+---
+
+## Lessons Learned
+
+### 1. Asset identity is a source-of-truth problem
+
+A device is not just an IP address. DHCP leases, ARP tables, private MACs, hostnames, stale observations, and user-confirmed labels all need to be reconciled carefully.
+
+### 2. A scanner is only useful if the results are explainable
+
+Raw scan output can be noisy. I learned to add context: why a target was included, why another was excluded, what evidence supports a finding, and whether the issue is active, accepted, stale, or resolved.
+
+### 3. Privacy has to be designed in from the beginning
+
+Home network data can expose more than expected. I built scrub/demo mode, metadata-only traffic review, `.env` secret handling, safe email attachments, and Git privacy checks to reduce that risk.
+
+### 4. Automation should assist analysts, not replace judgment
+
+HomeShield can collect, refresh, summarize, and report, but it does not automatically trust devices, close cases, accept risk, or change router settings. Human review remains part of the workflow.
+
+### 5. Good security tooling needs good UX
+
+Adding clear dashboard actions, save buttons, friendly validation, drilldowns, reports, and status summaries made the tool more practical and less like a collection of scripts.
+
+---
+
+## Safety Model
 
 HomeShield is intentionally defensive and local-only.
 
@@ -181,140 +228,40 @@ It does not perform:
 * Wi-Fi cracking
 * Packet injection
 * ARP poisoning
-* MAC spoofing
-* IP spoofing
-* Malware or RAT behavior
-* Public IP scanning by default
+* Spoofing
+* Malware behavior
+* Public-network scanning by default
 * Router/device configuration changes
 * Automatic blocking or trust decisions
 * Payload capture by default
 
-HomeShield is designed for authorized networks owned or managed by the user.
+HomeShield is intended only for networks the user owns, manages, or is authorized to test.
 
-Technical Highlights
+---
 
-* Python CLI tooling
-* Local dashboard workflow
-* Safe Nmap-based service checks
-* Router/DHCP/ARP evidence correlation
-* Device registry and identity resolver
-* SOC case registry and status resolver
-* Evidence-to-case linking
+## Technologies Used
+
+* Python
+* Typer / CLI tooling
+* Nmap-safe scan workflows
+* JSON / CSV data handling
+* HTML / Markdown / PDF report generation
+* Gmail SMTP
+* Local dashboard UI
+* pytest
+* Git / GitHub
+* Router, ARP, DHCP, and Wi-Fi evidence analysis
 * Metadata-only traffic summaries
-* Report generation
-* Automation workflows
-* Gmail SMTP weekly reporting
-* Portfolio-safe scrub/export mode
-* Pytest regression suite
 
-Testing
+---
 
-HomeShield has been developed through incremental releases with regression testing. Recent milestones include:
+## Project Value
 
-* Dashboard source-of-truth refactor
-* Commercial dashboard and traffic summary polish
-* Scanner source-of-truth integration
-* Live dashboard QA
-* Safe automation
-* Gmail SMTP send verification
-* Weekly report PDF attachment work in progress
+HomeShield demonstrates practical cybersecurity and product-engineering ability: not just scanning a network, but building a safer workflow around discovery, identity, evidence, triage, remediation, reporting, privacy, automation, and portfolio-safe presentation.
 
-The project currently includes hundreds of pytest tests covering scanner safety, device identity handling, SOC case status sync, dashboard views, traffic privacy, scrub/demo safety, automation, and email-reporting safeguards.
+It reflects the type of work I enjoy most: turning technical findings into clear decisions, usable tools, and defensible documentation.
 
-Example Use Cases
-
-* Home network inventory and review
-* Router and IoT hardening assessment
-* Unknown-device investigation
-* SOC-style alert triage practice
-* Evidence documentation
-* Remediation planning
-* Privacy-conscious traffic summary review
-* Cybersecurity portfolio demonstration
-* Technical product / security automation showcase
-
-Portfolio Value
-
-This project demonstrates:
-
-* Cybersecurity operations thinking
-* Python automation
-* Network troubleshooting
-* Safe scanning methodology
-* SOC workflow design
-* Evidence handling
-* Case management
-* Dashboard/product design
-* Data modeling
-* Privacy-by-design
-* Report generation
-* QA and regression testing
-* Technical documentation
-
-### Network Security Assessment & SIEM Integration Lab| Dec. 2025 |Enterprise-Grade Security Monitoring Homelab | Focus: Network Reconnaissance, Traffic Analysis, Intrusion Detection, and Centralized Log Management
-
-Built a fully functional security operations center (SOC) environment to identify, analyze, and mitigate network vulnerabilities across a multi-subnet home network. This project showcases practical skills in network reconnaissance, traffic analysis, intrusion detection, and centralized log management.
-
-🛠️ Technologies & Tools
-
-Security & Monitoring:
-* Splunk Enterprise — SIEM platform for log aggregation and correlation
-* Suricata IDS — Real-time intrusion detection and prevention
-* Nmap — Network discovery and vulnerability assessment
-* tcpdump — Packet capture and network traffic analysis
-  
-Environment:
-* Network: Multi-subnet LAN (192.168.8.0/24, 10.0.0.0/24)
-* Host OS: macOS 10.15
-* Hardware: GL.iNet Router, Multiple IoT devices
-* Protocols: HTTP/HTTPS, DNS, SSH, Telnet, RTSP, mDNS
-
-🎪 Key Achievements
-
-✅ Discovered 9 live hosts across two network subnets using Nmap reconnaissance 
-
-✅ Analyzed 5,000+ network flow records in Splunk with custom correlation queries 
-
-✅ Identified 28 medium-risk HTTP connections requiring security hardening 
-
-✅ Deployed Suricata IDS capturing 2,475 packets with automated alert generation 
-
-✅ Implemented HTTPS encryption on router management interface, reducing attack surface 
-
-✅ Mapped threats to MITRE ATT&CK framework (T1078, T1071, T1041, T1021) 
-
-✅ Created automated alerting for high-risk services (Telnet, unencrypted HTTP, RTSP)
-
-
-📊 Project Highlights
-
-Network Discovery & Enumeration
-* Performed comprehensive host discovery across home network
-* Enumerated services on all active hosts with version detection
-* Identified critical vulnerabilities: unencrypted HTTP, exposed Telnet, RTSP streams
-
-SIEM Integration & Analysis
-* Configured Splunk Enterprise with custom data inputs (XML, PCAP, JSON)
-* Developed SPL queries to correlate network flows with security events
-* Built dashboards for real-time monitoring and historical trend analysis
-* Processed multi-source telemetry from Nmap, tcpdump, and Suricata
-
-Traffic Analysis & Threat Detection
-* Captured live network traffic using tcpdump with targeted BPF filters
-* Analyzed DNS patterns (1,734 queries to Cloudflare DNS)
-* Identified encrypted vs unencrypted traffic ratios
-* Detected anomalous connection patterns and high-volume communications
-
-Security Hardening & Remediation
-* Disabled insecure services (Telnet port 23)
-* Implemented HTTPS with self-signed certificates on router GUI
-* Configured automated monitoring for remaining high-risk services
-* Validated remediation effectiveness through post-implementation scanning
-
-
-[Splunk Lab Security Assessment.pdf](https://github.com/user-attachments/files/24341908/Splunk.Lab.Security.Assessment.pdf)
-
-  
+ 
 ### Home Network Penetration Testing Reporting & Legal Authorization Project | Dec. 2025 | Technology Law & Cybersecurity Engagement | Focus: Computer Fraud and Abuse Act (CFAA), Cybersecurity Legal Frameworks
 
 •	Drafted comprehensive pre-engagement legal authorization suite including Authorization to Test, Rules of Engagement, Statement of Work, and Confidentiality Agreement; analyzed CFAA (18 U.S.C. § 1030) risk exposure and structured explicit written consent to distinguish authorized testing from unlawful access.
@@ -324,6 +271,8 @@ Security Hardening & Remediation
 •	Performed internal penetration test on home network, migrating devices from ISP modem to hardened GL.iNet router with segregated LAN and Guest SSIDs.
 
 •	Performed comprehensive network security assessments, vulnerability analysis, and embedded device hardening using industry-standard tools and methodologies. Practical expertise in network architecture design, including migrating home networks from ISP modem configurations to hardened router deployments with segregated wireless networks.
+
+[Splunk Lab Security Assessment.pdf](https://github.com/user-attachments/files/24341908/Splunk.Lab.Security.Assessment.pdf)
 
 [Master Services Agreement (MSA) and Rules of Engagement (RoE)-Network Penetration Testing.pdf](https://github.com/user-attachments/files/24281301/Master.Services.Agreement.MSA.and.Rules.of.Engagement.RoE.-Network.Penetration.Testing.pdf)
 
@@ -341,11 +290,12 @@ Security Hardening & Remediation
 [Network Penetration Testing Findings Report.pdf](https://github.com/user-attachments/files/24281303/Network.Penetration.Testing.Findings.Report.pdf)
 
 
-
 ### WordPress Security Governance & Legal Authorization | Dec. 2025 | Technology Law & Cybersecurity Engagement | Focus: Computer Fraud and Abuse Act (CFAA), Risk Governance
+
 ### WordPress Security Assessment & Containerized Lab | Dec. 2025| Authorized Web Application Security Assessment | Tools: Docker, WPScan, Nikto, Nmap, Apache/PHP, cURL
 
 Project Title: WordPress Security Assessment Lab
+
 Description: End-to-end security testing environment featuring containerized WordPress deployment, automated vulnerability scanning, and comprehensive security analysis. Demonstrates practical application of penetration testing methodologies, security tool proficiency, and professional documentation standards.
 Technologies: Docker, WPScan, Nikto, Nmap, WordPress, MySQL, Apache, PHP, Linux
 
@@ -360,8 +310,6 @@ Highlights:
 [Legal Authorization Authorized Internal Web Application Security Assessment.pdf](https://github.com/user-attachments/files/24281296/Legal.Authorization.Authorized.Internal.Web.Application.Security.Assessment.pdf)
 
 [Authorized Internal Web Application Security Assessment.pdf](https://github.com/user-attachments/files/24281298/Authorized.Internal.Web.Application.Security.Assessment.pdf)
-
-
 
 
  ## Previous Projects:
