@@ -11,7 +11,7 @@ Explore the highlights below to see how I turn technical challenges into practic
 
 ## Key Projects:
 
-### Sapphire Quant Lab 
+## Sapphire Quant Lab 
 
 is a Python-based paper-trading command center designed to simulate a disciplined trading operations workflow. It combines expanded-universe market scanning, real-time candidate ranking, setup review, risk controls, officer-style decision oversight, money tracking, audit logs, reports, and a searchable Knowledge Base into one dashboard. The system is built around safety-first principles: scanner results do not equal trade approval, proposals must pass review gates, paper trade actions remain locked unless conditions are satisfied, and live trading is disabled by default.
 
@@ -35,7 +35,7 @@ Through this project, I strengthened my understanding of Python application stru
 <img width="1235" height="685" alt="image" src="https://github.com/user-attachments/assets/da732199-f9bc-4bb4-9954-21f004697916" />
 
 
-### HomeShield CLI
+## HomeShield CLI
 
 # HomeShield CLI
 
@@ -288,7 +288,7 @@ It reflects the type of work I enjoy most: turning technical findings into clear
 
 ---
  
-### Home Network Penetration Testing Reporting & Legal Authorization Project | Dec. 2025 | Technology Law & Cybersecurity Engagement | Focus: Computer Fraud and Abuse Act (CFAA), Cybersecurity Legal Frameworks
+## Home Network Penetration Testing Reporting & Legal Authorization Project | Dec. 2025 | Technology Law & Cybersecurity Engagement | Focus: Computer Fraud and Abuse Act (CFAA), Cybersecurity Legal Frameworks
 
 •	Drafted comprehensive pre-engagement legal authorization suite including Authorization to Test, Rules of Engagement, Statement of Work, and Confidentiality Agreement; analyzed CFAA (18 U.S.C. § 1030) risk exposure and structured explicit written consent to distinguish authorized testing from unlawful access.
 
@@ -303,7 +303,7 @@ It reflects the type of work I enjoy most: turning technical findings into clear
 [Master Services Agreement (MSA) and Rules of Engagement (RoE)-Network Penetration Testing.pdf](https://github.com/user-attachments/files/24281301/Master.Services.Agreement.MSA.and.Rules.of.Engagement.RoE.-Network.Penetration.Testing.pdf)
 
 
-### Home Network Penetration Testing & Router Hardening Lab | Dec. 2025 | GL.iNet OpenWRT Security Assessment | Tools: Nmap, tcpdump, Dropbear SSH, OpenWRT/Linux, netstat
+## Home Network Penetration Testing & Router Hardening Lab | Dec. 2025 | GL.iNet OpenWRT Security Assessment | Tools: Nmap, tcpdump, Dropbear SSH, OpenWRT/Linux, netstat
 
 •	Performed internal penetration test on home network, migrating devices from ISP modem to hardened GL.iNet router with segregated LAN and Guest SSIDs.
 
