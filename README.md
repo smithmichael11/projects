@@ -4,11 +4,26 @@ I have created a series of documents and videos to showcase my key technical pro
 
 ## Key Projects:
 
-###Sapphire Quant Lab 
+### Sapphire Quant Lab 
 
 is a Python-based paper-trading command center designed to simulate a disciplined trading operations workflow. It combines expanded-universe market scanning, real-time candidate ranking, setup review, risk controls, officer-style decision oversight, money tracking, audit logs, reports, and a searchable Knowledge Base into one dashboard. The system is built around safety-first principles: scanner results do not equal trade approval, proposals must pass review gates, paper trade actions remain locked unless conditions are satisfied, and live trading is disabled by default.
 
+<img width="1389" height="686" alt="image" src="https://github.com/user-attachments/assets/35075308-1185-447a-b6bf-0b680bab210b" />
+
+<img width="1430" height="661" alt="image" src="https://github.com/user-attachments/assets/2768705b-8b83-4a84-9990-3dad26d41af1" />
+
+
 Through this project, I strengthened my understanding of Python application structure, dashboard design, market-data workflows, runtime state management, safety gates, audit logging, and test-driven development. I also learned how important information architecture is when building operator-facing tools: a system can have strong logic, but it still needs a simple interface, clear source-of-truth data flow, and concise next-action guidance to be useful. The project helped me connect technical automation with financial technology, risk governance, trading psychology, and practical decision-support design.
+
+
+<img width="1258" height="502" alt="image" src="https://github.com/user-attachments/assets/28f6646b-d790-4815-8d96-ddae3ba0261f" />
+
+
+<img width="1429" height="661" alt="image" src="https://github.com/user-attachments/assets/a036777f-5816-4da6-89f7-7109bba9f16b" />
+
+
+<img width="1235" height="685" alt="image" src="https://github.com/user-attachments/assets/da732199-f9bc-4bb4-9954-21f004697916" />
+
 
 ### HomeShield CLI
 
